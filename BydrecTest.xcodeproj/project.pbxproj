@@ -12,9 +12,11 @@
 		533440B5229DFD00002D6E22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533440B3229DFD00002D6E22 /* Main.storyboard */; };
 		533440B7229DFD02002D6E22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 533440B6229DFD02002D6E22 /* Assets.xcassets */; };
 		533440BA229DFD02002D6E22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533440B8229DFD02002D6E22 /* LaunchScreen.storyboard */; };
+		D135265A40E2B48A3BB756CA /* Pods_BydrecTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C89F6CDC463A56768CFA672E /* Pods_BydrecTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102CE5F7A80C0B71F51B18D6 /* Pods-BydrecTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BydrecTest.debug.xcconfig"; path = "Target Support Files/Pods-BydrecTest/Pods-BydrecTest.debug.xcconfig"; sourceTree = "<group>"; };
 		533440AC229DFD00002D6E22 /* BydrecTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BydrecTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		533440AF229DFD00002D6E22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		533440B1229DFD00002D6E22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		533440B6229DFD02002D6E22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		533440B9229DFD02002D6E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		533440BB229DFD02002D6E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C6344C2A4CF7F1274898942 /* Pods-BydrecTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BydrecTest.release.xcconfig"; path = "Target Support Files/Pods-BydrecTest/Pods-BydrecTest.release.xcconfig"; sourceTree = "<group>"; };
+		C89F6CDC463A56768CFA672E /* Pods_BydrecTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BydrecTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D135265A40E2B48A3BB756CA /* Pods_BydrecTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1ADA86CF6DC177194CE5C334 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				102CE5F7A80C0B71F51B18D6 /* Pods-BydrecTest.debug.xcconfig */,
+				6C6344C2A4CF7F1274898942 /* Pods-BydrecTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		533440A3229DFD00002D6E22 = {
 			isa = PBXGroup;
 			children = (
 				533440AE229DFD00002D6E22 /* BydrecTest */,
 				533440AD229DFD00002D6E22 /* Products */,
+				1ADA86CF6DC177194CE5C334 /* Pods */,
+				755F800E5639D17E3CCF0054 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +81,14 @@
 			path = BydrecTest;
 			sourceTree = "<group>";
 		};
+		755F800E5639D17E3CCF0054 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C89F6CDC463A56768CFA672E /* Pods_BydrecTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 533440BE229DFD02002D6E22 /* Build configuration list for PBXNativeTarget "BydrecTest" */;
 			buildPhases = (
+				BBE679583B942639ED2A5E03 /* [CP] Check Pods Manifest.lock */,
 				533440A8229DFD00002D6E22 /* Sources */,
 				533440A9229DFD00002D6E22 /* Frameworks */,
 				533440AA229DFD00002D6E22 /* Resources */,
@@ -129,6 +155,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BBE679583B942639ED2A5E03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BydrecTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		533440A8229DFD00002D6E22 /* Sources */ = {
@@ -280,6 +331,7 @@
 		};
 		533440BF229DFD02002D6E22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 102CE5F7A80C0B71F51B18D6 /* Pods-BydrecTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +349,7 @@
 		};
 		533440C0229DFD02002D6E22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C6344C2A4CF7F1274898942 /* Pods-BydrecTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
