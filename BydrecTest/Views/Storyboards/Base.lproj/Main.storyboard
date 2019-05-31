@@ -91,7 +91,7 @@
                                                         <constraint firstAttribute="width" constant="50" id="GDc-RR-MCe"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erh-D6-gol">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erh-D6-gol" customClass="MLLinkLabel">
                                                     <rect key="frame" x="20" y="120" width="374" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="nos-mr-zB8"/>
@@ -152,6 +152,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="cEn-jM-gEG"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QSk-Z5-cUi"/>
                                 </connections>
                             </collectionView>
                         </subviews>

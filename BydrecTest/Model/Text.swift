@@ -15,6 +15,6 @@ public struct Text: Decodable {
   public struct Markup: Decodable {
     public let length: Int
     public let location: Int
-    public let link: String
+    public let link: URL
   }
 }

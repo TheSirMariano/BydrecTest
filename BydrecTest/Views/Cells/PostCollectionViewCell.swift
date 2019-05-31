@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import MLLabel
 
 final class PostCollectionViewCell: UICollectionViewCell, ReuseIdentifiable {
   
@@ -16,7 +17,7 @@ final class PostCollectionViewCell: UICollectionViewCell, ReuseIdentifiable {
   @IBOutlet weak var twitterNameLabel: UILabel!
   @IBOutlet weak var userNameLabel: UILabel!
   @IBOutlet weak var socialImageView: UIImageView!
-  @IBOutlet weak var postTextLabel: UILabel!
+  @IBOutlet weak var postTextLabel: MLLinkLabel!
   @IBOutlet weak var postImageView: UIImageView!
   @IBOutlet weak var dateLabel: UILabel!
   
@@ -65,6 +66,8 @@ final class PostCollectionViewCell: UICollectionViewCell, ReuseIdentifiable {
     }
   }
   
+  public var didSelectLink: ((String) -> Void)?
+  
   // MARK: - Override
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -93,16 +96,17 @@ final class PostCollectionViewCell: UICollectionViewCell, ReuseIdentifiable {
   
   private func setUpForViewModel(_ viewModel: PostViewModel) {
     userNameLabel.text = viewModel.userName
-    postTextLabel.text = viewModel.postText
     dateLabel.text = viewModel.postDate
     socialImageView.image = UIImage(named: viewModel.networkImageName)
     
     setUpVerifiedAccount(forViewModel: viewModel)
     setUpAttachment(forViewModel: viewModel)
+    setUpText(forViewModel: viewModel)
     
     if let profileImageUrl = viewModel.profileImageUrl {
       profileImageView.af_setImage(withURL: profileImageUrl)
     }
+    
   }
   
   private func setUpVerifiedAccount(forViewModel viewModel: PostViewModel) {
@@ -146,6 +150,39 @@ final class PostCollectionViewCell: UICollectionViewCell, ReuseIdentifiable {
     } else {
       postImageViewHeightConstraint.constant = 0
       postImageViewHeightConstraint.isActive = true
+    }
+  }
+  
+  private func setUpText(forViewModel viewModel: PostViewModel) {
+    
+    
+//    let text = NSString(string: viewModel.postText)
+//    let newText = text.composedSubstring(with: NSMakeRange(0, text.length))
+    
+    postTextLabel.text = viewModel.postText
+    for markup in viewModel.markups ?? [] {
+      postTextLabel!.addLink(with: .URL, value: markup.link.absoluteString, range: NSMakeRange(markup.location, markup.length))
+    }
+    postTextLabel.didClickLinkBlock = {[weak self] link, string, url in
+      switch link!.linkType {
+      case .email:
+        break
+      case .none:
+        break
+      case .URL:
+        self?.didSelectLink?(link!.linkValue)
+        break
+      case .phoneNumber:
+        break
+      case .userHandle:
+        break
+      case .hashtag:
+        break
+      case .other:
+        break
+      @unknown default:
+        break
+      }
     }
   }
   

@@ -51,10 +51,19 @@ final class PostsViewController: UIViewController, Alertable {
     })
   }
   
-  func setUpView() {
+  private func setUpView() {
     collectionView.addInfiniteScroll(handler: { [unowned self] tableView in
       self.loadPosts()
     })
+  }
+  
+  private func handleLink(_ link: String) {
+    guard let url = URL(string: link) else {
+      return
+    }
+    if UIApplication.shared.canOpenURL(url) {
+      UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
   }
 }
 
@@ -77,8 +86,19 @@ extension PostsViewController: UICollectionViewDataSource {
     
     let post = posts[indexPath.item]
     cell.viewModel = PostViewModel(post: post)
+    cell.didSelectLink = { [unowned self] link in
+      self.handleLink(link)
+    }
     
     return cell
+  }
+}
+
+// MARK: - UICollectionViewDelegate
+extension PostsViewController: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let post = posts[indexPath.item]
+    handleLink(post.link?.absoluteString ?? "")
   }
 }
 

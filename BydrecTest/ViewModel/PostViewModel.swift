@@ -9,6 +9,7 @@
 import Foundation
 
 public typealias PostAttachment = (ratio: Double, link: URL)
+public typealias TextMarkup = (length: Int, location: Int, link: URL)
 
 public struct PostViewModel {
   
@@ -20,6 +21,7 @@ public struct PostViewModel {
   public let isVerified: Bool
   public let userName: String
   public let postText: String
+  public let markups: [TextMarkup]?
   public let postDate: String
   public let networkImageName: String
   
@@ -56,11 +58,12 @@ public struct PostViewModel {
     accountName = post.author.account == nil ? "" : "@\(post.author.account!)"
     isVerified = post.author.isVerified
     userName = post.author.name
-    postText = post.text?.plain ?? ""
     postImageUrl = post.attachment?.pictureLink
     postImageWidth = post.attachment?.width
     postImageHeight = post.attachment?.height
     networkImageName = post.networkType.imageName
+    postText = post.text?.plain ?? ""
+    markups = post.text?.markup.map({ return TextMarkup($0.length, $0.location, $0.link )})
     
     guard let serverDate = DateFormatterFactory.shared.serverDateFormatter.date(from: post.date) else {
       postDate = ""

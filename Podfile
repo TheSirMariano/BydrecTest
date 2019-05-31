@@ -10,5 +10,6 @@ target 'BydrecTest' do
   pod 'Moya'
   pod 'AlamofireImage'
   pod 'UIScrollView-InfiniteScroll', '~> 1.0.0'
-
+  pod 'MLLabel'
+  
 end

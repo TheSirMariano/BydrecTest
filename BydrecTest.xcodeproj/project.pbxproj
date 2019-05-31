@@ -24,6 +24,7 @@
 		533440E622A10342002D6E22 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440E522A10342002D6E22 /* Attachment.swift */; };
 		533440E822A103CC002D6E22 /* SocialService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440E722A103CC002D6E22 /* SocialService.swift */; };
 		533440EA22A10A80002D6E22 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440E922A10A80002D6E22 /* Alertable.swift */; };
+		533440F422A12F7E002D6E22 /* NSString+ComposedRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 533440F322A12F7E002D6E22 /* NSString+ComposedRange.m */; };
 		D135265A40E2B48A3BB756CA /* Pods_BydrecTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C89F6CDC463A56768CFA672E /* Pods_BydrecTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,9 @@
 		533440E522A10342002D6E22 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		533440E722A103CC002D6E22 /* SocialService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialService.swift; sourceTree = "<group>"; };
 		533440E922A10A80002D6E22 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		533440EB22A11FFB002D6E22 /* BydrecTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BydrecTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		533440F222A12F7E002D6E22 /* NSString+ComposedRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ComposedRange.h"; sourceTree = "<group>"; };
+		533440F322A12F7E002D6E22 /* NSString+ComposedRange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ComposedRange.m"; sourceTree = "<group>"; };
 		6C6344C2A4CF7F1274898942 /* Pods-BydrecTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BydrecTest.release.xcconfig"; path = "Target Support Files/Pods-BydrecTest/Pods-BydrecTest.release.xcconfig"; sourceTree = "<group>"; };
 		C89F6CDC463A56768CFA672E /* Pods_BydrecTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BydrecTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				533440DB22A10008002D6E22 /* AppDelegate */,
+				533440F522A136A2002D6E22 /* Extensions */,
 				533440DF22A100E8002D6E22 /* Factories */,
 				533440D022A0C6CB002D6E22 /* Model */,
 				533440E022A100F4002D6E22 /* Networking */,
@@ -190,6 +195,7 @@
 		533440DE22A10043002D6E22 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				533440EB22A11FFB002D6E22 /* BydrecTest-Bridging-Header.h */,
 				533440BB229DFD02002D6E22 /* Info.plist */,
 			);
 			name = "Supporting files";
@@ -210,6 +216,15 @@
 				533440E722A103CC002D6E22 /* SocialService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		533440F522A136A2002D6E22 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				533440F222A12F7E002D6E22 /* NSString+ComposedRange.h */,
+				533440F322A12F7E002D6E22 /* NSString+ComposedRange.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		755F800E5639D17E3CCF0054 /* Frameworks */ = {
@@ -254,6 +269,7 @@
 				TargetAttributes = {
 					533440AB229DFD00002D6E22 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -340,6 +356,7 @@
 				533440B2229DFD00002D6E22 /* PostsViewController.swift in Sources */,
 				533440D422A0FD48002D6E22 /* DateFormatterFactory.swift in Sources */,
 				533440B0229DFD00002D6E22 /* AppDelegate.swift in Sources */,
+				533440F422A12F7E002D6E22 /* NSString+ComposedRange.m in Sources */,
 				533440E622A10342002D6E22 /* Attachment.swift in Sources */,
 				533440E222A10306002D6E22 /* Author.swift in Sources */,
 				533440C4229ED290002D6E22 /* ReuseIdentifiable.swift in Sources */,
@@ -495,6 +512,7 @@
 			baseConfigurationReference = 102CE5F7A80C0B71F51B18D6 /* Pods-BydrecTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 597KZZAL9E;
 				INFOPLIST_FILE = BydrecTest/Info.plist;
@@ -504,6 +522,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marianocornejo.BydrecTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BydrecTest/BydrecTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -514,6 +534,7 @@
 			baseConfigurationReference = 6C6344C2A4CF7F1274898942 /* Pods-BydrecTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 597KZZAL9E;
 				INFOPLIST_FILE = BydrecTest/Info.plist;
@@ -523,6 +544,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marianocornejo.BydrecTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BydrecTest/BydrecTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
