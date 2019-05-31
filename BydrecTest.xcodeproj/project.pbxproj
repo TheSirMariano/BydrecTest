@@ -3,15 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		533440B0229DFD00002D6E22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440AF229DFD00002D6E22 /* AppDelegate.swift */; };
-		533440B2229DFD00002D6E22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440B1229DFD00002D6E22 /* ViewController.swift */; };
+		533440B2229DFD00002D6E22 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440B1229DFD00002D6E22 /* PostsViewController.swift */; };
 		533440B5229DFD00002D6E22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533440B3229DFD00002D6E22 /* Main.storyboard */; };
 		533440B7229DFD02002D6E22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 533440B6229DFD02002D6E22 /* Assets.xcassets */; };
 		533440BA229DFD02002D6E22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533440B8229DFD02002D6E22 /* LaunchScreen.storyboard */; };
+		533440C2229ED03E002D6E22 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440C1229ED03E002D6E22 /* PostCollectionViewCell.swift */; };
+		533440C4229ED290002D6E22 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440C3229ED290002D6E22 /* ReuseIdentifiable.swift */; };
+		533440C6229ED384002D6E22 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440C5229ED384002D6E22 /* Post.swift */; };
+		533440CA229ED532002D6E22 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440C9229ED532002D6E22 /* PostViewModel.swift */; };
+		533440CC22A0B746002D6E22 /* SocialEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440CB22A0B746002D6E22 /* SocialEndpoint.swift */; };
+		533440D222A0E83D002D6E22 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440D122A0E83D002D6E22 /* Constants.swift */; };
+		533440D422A0FD48002D6E22 /* DateFormatterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440D322A0FD48002D6E22 /* DateFormatterFactory.swift */; };
+		533440E222A10306002D6E22 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440E122A10306002D6E22 /* Author.swift */; };
+		533440E422A1031E002D6E22 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440E322A1031E002D6E22 /* Text.swift */; };
+		533440E622A10342002D6E22 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440E522A10342002D6E22 /* Attachment.swift */; };
+		533440E822A103CC002D6E22 /* SocialService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440E722A103CC002D6E22 /* SocialService.swift */; };
+		533440EA22A10A80002D6E22 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533440E922A10A80002D6E22 /* Alertable.swift */; };
 		D135265A40E2B48A3BB756CA /* Pods_BydrecTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C89F6CDC463A56768CFA672E /* Pods_BydrecTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +31,23 @@
 		102CE5F7A80C0B71F51B18D6 /* Pods-BydrecTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BydrecTest.debug.xcconfig"; path = "Target Support Files/Pods-BydrecTest/Pods-BydrecTest.debug.xcconfig"; sourceTree = "<group>"; };
 		533440AC229DFD00002D6E22 /* BydrecTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BydrecTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		533440AF229DFD00002D6E22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		533440B1229DFD00002D6E22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		533440B1229DFD00002D6E22 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		533440B4229DFD00002D6E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		533440B6229DFD02002D6E22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		533440B9229DFD02002D6E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		533440BB229DFD02002D6E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		533440C1229ED03E002D6E22 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		533440C3229ED290002D6E22 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
+		533440C5229ED384002D6E22 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ../Post.swift; sourceTree = "<group>"; };
+		533440C9229ED532002D6E22 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		533440CB22A0B746002D6E22 /* SocialEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialEndpoint.swift; sourceTree = "<group>"; };
+		533440D122A0E83D002D6E22 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		533440D322A0FD48002D6E22 /* DateFormatterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterFactory.swift; sourceTree = "<group>"; };
+		533440E122A10306002D6E22 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		533440E322A1031E002D6E22 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		533440E522A10342002D6E22 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		533440E722A103CC002D6E22 /* SocialService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialService.swift; sourceTree = "<group>"; };
+		533440E922A10A80002D6E22 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		6C6344C2A4CF7F1274898942 /* Pods-BydrecTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BydrecTest.release.xcconfig"; path = "Target Support Files/Pods-BydrecTest/Pods-BydrecTest.release.xcconfig"; sourceTree = "<group>"; };
 		C89F6CDC463A56768CFA672E /* Pods_BydrecTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BydrecTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -46,7 +70,6 @@
 				102CE5F7A80C0B71F51B18D6 /* Pods-BydrecTest.debug.xcconfig */,
 				6C6344C2A4CF7F1274898942 /* Pods-BydrecTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -71,14 +94,122 @@
 		533440AE229DFD00002D6E22 /* BydrecTest */ = {
 			isa = PBXGroup;
 			children = (
-				533440AF229DFD00002D6E22 /* AppDelegate.swift */,
-				533440B1229DFD00002D6E22 /* ViewController.swift */,
-				533440B3229DFD00002D6E22 /* Main.storyboard */,
-				533440B6229DFD02002D6E22 /* Assets.xcassets */,
-				533440B8229DFD02002D6E22 /* LaunchScreen.storyboard */,
-				533440BB229DFD02002D6E22 /* Info.plist */,
+				533440DB22A10008002D6E22 /* AppDelegate */,
+				533440DF22A100E8002D6E22 /* Factories */,
+				533440D022A0C6CB002D6E22 /* Model */,
+				533440E022A100F4002D6E22 /* Networking */,
+				533440D622A0FFC0002D6E22 /* Protocols */,
+				533440D822A0FFDF002D6E22 /* Resources */,
+				533440DE22A10043002D6E22 /* Supporting files */,
+				533440DA22A10001002D6E22 /* ViewControllers */,
+				533440D522A0FFA7002D6E22 /* ViewModel */,
+				533440D722A0FFC8002D6E22 /* Views */,
 			);
 			path = BydrecTest;
+			sourceTree = "<group>";
+		};
+		533440D022A0C6CB002D6E22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				533440C5229ED384002D6E22 /* Post.swift */,
+				533440E122A10306002D6E22 /* Author.swift */,
+				533440E322A1031E002D6E22 /* Text.swift */,
+				533440E522A10342002D6E22 /* Attachment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		533440D522A0FFA7002D6E22 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				533440C9229ED532002D6E22 /* PostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		533440D622A0FFC0002D6E22 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				533440E922A10A80002D6E22 /* Alertable.swift */,
+				533440C3229ED290002D6E22 /* ReuseIdentifiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		533440D722A0FFC8002D6E22 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				533440D922A0FFF9002D6E22 /* Storyboards */,
+				533440DC22A10025002D6E22 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		533440D822A0FFDF002D6E22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				533440B6229DFD02002D6E22 /* Assets.xcassets */,
+				533440D122A0E83D002D6E22 /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		533440D922A0FFF9002D6E22 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				533440B3229DFD00002D6E22 /* Main.storyboard */,
+				533440B8229DFD02002D6E22 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		533440DA22A10001002D6E22 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				533440B1229DFD00002D6E22 /* PostsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		533440DB22A10008002D6E22 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				533440AF229DFD00002D6E22 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		533440DC22A10025002D6E22 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				533440C1229ED03E002D6E22 /* PostCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		533440DE22A10043002D6E22 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				533440BB229DFD02002D6E22 /* Info.plist */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		533440DF22A100E8002D6E22 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				533440D322A0FD48002D6E22 /* DateFormatterFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		533440E022A100F4002D6E22 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				533440CB22A0B746002D6E22 /* SocialEndpoint.swift */,
+				533440E722A103CC002D6E22 /* SocialService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		755F800E5639D17E3CCF0054 /* Frameworks */ = {
@@ -100,6 +231,7 @@
 				533440A8229DFD00002D6E22 /* Sources */,
 				533440A9229DFD00002D6E22 /* Frameworks */,
 				533440AA229DFD00002D6E22 /* Resources */,
+				7960B45117D7613C7A8A9D75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,6 +289,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7960B45117D7613C7A8A9D75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BydrecTest/Pods-BydrecTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BydrecTest/Pods-BydrecTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BydrecTest/Pods-BydrecTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BBE679583B942639ED2A5E03 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,8 +335,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				533440B2229DFD00002D6E22 /* ViewController.swift in Sources */,
+				533440CA229ED532002D6E22 /* PostViewModel.swift in Sources */,
+				533440E822A103CC002D6E22 /* SocialService.swift in Sources */,
+				533440B2229DFD00002D6E22 /* PostsViewController.swift in Sources */,
+				533440D422A0FD48002D6E22 /* DateFormatterFactory.swift in Sources */,
 				533440B0229DFD00002D6E22 /* AppDelegate.swift in Sources */,
+				533440E622A10342002D6E22 /* Attachment.swift in Sources */,
+				533440E222A10306002D6E22 /* Author.swift in Sources */,
+				533440C4229ED290002D6E22 /* ReuseIdentifiable.swift in Sources */,
+				533440EA22A10A80002D6E22 /* Alertable.swift in Sources */,
+				533440C2229ED03E002D6E22 /* PostCollectionViewCell.swift in Sources */,
+				533440C6229ED384002D6E22 /* Post.swift in Sources */,
+				533440CC22A0B746002D6E22 /* SocialEndpoint.swift in Sources */,
+				533440E422A1031E002D6E22 /* Text.swift in Sources */,
+				533440D222A0E83D002D6E22 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 597KZZAL9E;
 				INFOPLIST_FILE = BydrecTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -343,7 +505,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.marianocornejo.BydrecTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,6 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 597KZZAL9E;
 				INFOPLIST_FILE = BydrecTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -361,7 +524,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.marianocornejo.BydrecTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
